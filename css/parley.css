@@ -1,0 +1,127 @@
+/*
+    TODO: Selectors are a bit too specific to the landing page, and should
+    probably rely more on classes. Once we get the privacy, terms, etc. pages
+    together they may want to use header and other elements in ways unlike
+    how the landing page uses them.
+*/
+
+@font-face {
+    font-family: Catamaran;
+    src:url("../font/Catamaran-Thin.ttf");
+}
+
+html * {
+    font-weight: 100;
+}
+
+body {
+    background-image: linear-gradient(#0a1a42, black);
+    color: white;
+    font-family: Catamaran, Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    margin: 0px;
+}
+
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+}
+
+/* Sourced from https://github.com/pixelsign/html5-device-mockups */
+/* === */
+.device-wrapper {
+    max-width: 300px;
+    width: 100%;
+}
+
+.device {
+    padding-bottom: 203.103448276%;
+    position: relative;
+}
+
+.device::after {
+    background-image: url(../img/iphone_portrait_white.png);
+    background-size: cover;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.device .screen
+{
+    background-image: url("../img/splash-screen.png");
+    background-size: cover;
+    height: 76.0611205433%;
+    left: 6.2068965517%;
+    position: absolute;
+    top: 11.9977362762%;
+    width: 87.3563218391%;
+}
+/* === */
+
+@media (max-width: 768px) {
+    .device-wrapper {
+        display: none;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+}
+
+h1 {
+    margin: 0px;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
+section div {
+    text-align: center;
+    width: 75%;
+}
+
+hr {
+    color: inherit;
+    width: 10%;
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+    margin-bottom: 7.5vh;
+    margin-top: 10vh;
+    text-align: center;
+}
