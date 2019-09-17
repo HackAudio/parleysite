@@ -47,7 +47,7 @@ header h1 {
     height: 30%;
 }
 
-/* Sourced from https://github.com/pixelsign/html5-device-mockups */
+/* Adapted from https://github.com/pixelsign/html5-device-mockups */
 /* === */
 .device-wrapper {
     max-width: 300px;
@@ -55,29 +55,28 @@ header h1 {
 }
 
 .device {
-    padding-bottom: 203.103448276%;
+    padding-bottom: 198.89807163%;
     position: relative;
 }
 
 .device::after {
-    background-image: url(../img/iphone_portrait_white.png);
+    background-image: url(../img/iphone_portrait.png);
     background-size: cover;
     content: '';
     height: 100%;
     position: absolute;
     width: 100%;
-    z-index: -1;
 }
 
 .device .screen
 {
     background-image: url("../img/splash-screen.png");
     background-size: cover;
-    height: 76.0611205433%;
-    left: 6.2068965517%;
+    height: 93.49030471%;
+    left: 7.162534435%;
     position: absolute;
-    top: 11.9977362762%;
-    width: 87.3563218391%;
+    top: 3.254847645%;
+    width: 85.67493113%;
 }
 /* === */
 
