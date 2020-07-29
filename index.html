@@ -11,14 +11,17 @@
 <body>
     <header>
         <img src='img/Parley-blue@3x.png'>
-        <h1>
-            <span>Your Conversations, <br>In Crystal Clear Quality</span>
-        </h1>
-       
+        <div>
+
+            <h1>
+                <span>Your Conversations, <br>In Crystal Clear Quality</span>
+            </h1>
+            
             <!-- TODO: Update to app store link when ready -->
             <a href="#">
-                <img src="img/app-store-badge.svg">
+                <img class="app-store" src="img/app-store-badge.svg">
             </a>
+        </div>
 
         <!-- Adapted from https://github.com/pixelsign/html5-device-mockups -->
         <!-- <div class="device-wrapper">
@@ -28,28 +31,33 @@
         </div> -->
     </header>
     <section>
-        <div>
-            <h1>Recording</h1>
-            <p>High quality recording ensures your listeners never miss a word</p>
+        <div class="mockup">
+            <img src="img/iPhoneMockup.png" alt="iPhone mockup screen" />
         </div>
-        <div>
-            <h1>Post-Processing</h1>
-            <p>Enhance your audio for radio ready sound</p>
-        </div>
-        <div>
-            <h1>Storage</h1>
-            <p>Manage your recordings with ease</p>
-        </div>
-        <div>
-            <h1>Sharing</h1>
-            <p>Get your message out there with Dropbox & Google Drive integration</p>
+        <div class="copy">
+            <div class="copy-item">
+                <h2>Recording</h2>
+                <div>High quality recording ensures your listeners never miss a word</div>
+            </div>
+            <div class="copy-item">
+                <h2>Post-Processing</h2>
+                <div>Enhance your audio for radio ready sound</div>
+            </div>
+            <div class="copy-item">
+                <h2>Storage</h2>
+                <div>Manage your recordings with ease</div>
+            </div>
+            <div class="copy-item">
+                <h2>Sharing</h2>
+                <div>Get your message out there with Dropbox & Google Drive integration</div>
+            </div>
         </div>
     </section>
     <hr>
     <footer>
         <!-- TODO: Create pages for these -->
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+        <a href="docs/PrivacyPolicy.pdf">Privacy</a>
+        <a href="docs/Terms.pdf">Terms</a>
         <a href="#">FAQ</a>
     </footer>
 </body>
