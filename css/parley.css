@@ -5,6 +5,13 @@
     how the landing page uses them.
 */
 
+:root {
+    --color-primary: #0B1B40;
+    --color-secondary: #F0CFE3;
+    --color-accent: #CBEFFF;
+    --color-link:  #6B6B6B;
+}
+
 @font-face {
     font-family: Catamaran;
     src:url("../font/Catamaran-Thin.ttf");
@@ -15,10 +22,10 @@ html * {
 }
 
 body {
-    background-image: linear-gradient(#0a1a42, black);
-    color: white;
-    font-family: Catamaran, Helvetica, Arial, sans-serif;
-    letter-spacing: 2px;
+    
+background: linear-gradient(180deg, #CBEFFF 53.37%, rgba(255, 255, 255, 0) 102.4%), #F0CFE3;
+    color: var(--color-primary);
+    font-family: Catamaran;
     margin: 0px;
 }
 
@@ -32,11 +39,18 @@ a:visited {
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    padding-top: 20%;
     align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header img {
+    width: 60%;
+    margin: auto;
 }
 
 header h1 {
@@ -45,50 +59,20 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
     height: 30%;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 2em 0;
 }
 
-/* Adapted from https://github.com/pixelsign/html5-device-mockups */
-/* === */
-.device-wrapper {
-    max-width: 300px;
-    width: 100%;
+header a {
+    width: 35%;
+    align-self: center;
+    margin: auto;
+    display: flex;
+    align-content: center;
 }
 
-.device {
-    padding-bottom: 198.89807163%;
-    position: relative;
-}
 
-.device::after {
-    background-image: url(../img/iphone_portrait.png);
-    background-size: cover;
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
-.device .screen
-{
-    background-image: url("../img/splash-screen.png");
-    background-size: cover;
-    height: 93.49030471%;
-    left: 7.162534435%;
-    position: absolute;
-    top: 3.254847645%;
-    width: 85.67493113%;
-}
-/* === */
-
-@media (max-width: 768px) {
-    .device-wrapper {
-        display: none;
-    }
-
-    header h1 {
-        text-align: center;
-    }
-}
 
 h1 {
     margin: 0px;
@@ -98,20 +82,43 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
     margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-top:5vh;
 }
 
+.mockup {
+    margin-bottom: 80px;
+}
+.copy  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.copy h2 {
+    font-size: 36px;
+    margin: 0 0 12px 0 !important;
+    margin-bottom: 12px !important;
+    margin-block-start: 0 !important;
+}
+.copy-item{
+    text-align: center;
+    margin: auto 0 60px 0;
+}
+
+.copy-item div {
+    width: 75%;
+    margin: auto;
+    font-size: 24px;
+}
 section div {
     text-align: center;
-    width: 75%;
 }
 
 hr {
     color: inherit;
-    width: 10%;
+    width:50%;
 }
 
 footer {
@@ -119,8 +126,77 @@ footer {
     display: flex;
     flex-direction: column;
     height: 20vh;
-    justify-content: space-around;
-    margin-bottom: 7.5vh;
-    margin-top: 10vh;
+    font-size: 36px;
+    line-height: 2;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     text-align: center;
+    color: var(--color-link)
+}
+
+
+@media (min-width: 1000px){
+    header {
+        width: 75%;
+        flex-direction: row;
+        margin: auto;
+        padding-top: 10vh;
+        justify-content: space-between
+    }
+
+    header img {
+        width: 50%;
+        margin: 0;
+    }
+    
+    header h1 {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 2.5em;
+        text-align: center;
+        margin: 2em 0 .5em 0 ;
+    }
+
+    .app-store{
+        width: 100%;
+        margin: 0 auto
+    }
+
+    section {
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        align-items: flex-start;
+        margin-top: 10em;
+        justify-content: space-evenly !important;
+    }
+
+    .mockup img{
+        width: 75%;
+    }
+
+   .copy h2 {
+        font-size: 24px;
+    }
+
+    .copy-item div {
+        width: 80%;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    footer{
+        display: block;
+        margin: 2em auto;
+        font-size: 1.5em;
+    }
+    footer a {
+        margin: 0 1em;
+    }
+    hr {
+        width: 15%;
+        margin-top: 3em;
+    }
 }
